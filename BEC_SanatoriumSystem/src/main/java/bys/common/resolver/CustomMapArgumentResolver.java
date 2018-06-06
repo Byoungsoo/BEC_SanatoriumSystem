@@ -14,8 +14,8 @@ import bys.common.common.CommandMap;
 
 
 /************************************************************************************/
-/**   HandlerMethodArgumentResolver´Â SpringÀÇ ÄÁÆ®·Ñ·¯µéÀ» ´Ù·ê ¶§,   				         /
-/**   ÄÁÆ®·Ñ·¯¿¡ µé¾î¿À´Â ÆÄ¶ó¹ÌÅÍ¸¦ ¼öÁ¤ÇÏ°Å³ª °øÅëÀûÀ¸·Î Ãß°¡ÇØ¾ß ÇÏ´Â °æ¿ì¿¡ »ç¿ëÇÑ´Ù.							 /
+/**   HandlerMethodArgumentResolverëŠ” Springì˜ ì»¨íŠ¸ë¡¤ëŸ¬ë“¤ì„ ë‹¤ë£° ë•Œ,   				         /
+/**   ì»¨íŠ¸ë¡¤ëŸ¬ì— ë“¤ì–´ì˜¤ëŠ” íŒŒë¼ë¯¸í„°ë¥¼ ìˆ˜ì •í•˜ê±°ë‚˜ ê³µí†µì ìœ¼ë¡œ ì¶”ê°€í•´ì•¼ í•˜ëŠ” ê²½ìš°ì— ì‚¬ìš©í•œë‹¤.							 /
 /************************************************************************************/
 public class CustomMapArgumentResolver implements HandlerMethodArgumentResolver{
 	
@@ -23,8 +23,8 @@ public class CustomMapArgumentResolver implements HandlerMethodArgumentResolver{
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
 		/************************************************************************************/
-		/**   isAssignableFrom ÇÔ¼ö´Â  µ¿ÀûÀ¸·Î Class¸¦ È®ÀÎÇÒ ¶§ »ç¿ëÇÑ´Ù	    				         /
-		/**   Parameter·Î µé¾î¿Â °ªÀÌ CommandMap Å¬·¡½ºÀÎÁö È®ÀÎ ÇÏ´Â ÀıÂ÷		    				         /
+		/**   isAssignableFrom í•¨ìˆ˜ëŠ”  ë™ì ìœ¼ë¡œ Classë¥¼ í™•ì¸í•  ë•Œ ì‚¬ìš©í•œë‹¤	    				         /
+		/**   Parameterë¡œ ë“¤ì–´ì˜¨ ê°’ì´ CommandMap í´ë˜ìŠ¤ì¸ì§€ í™•ì¸ í•˜ëŠ” ì ˆì°¨		    				         /
 		/************************************************************************************/
 		return CommandMap.class.isAssignableFrom(parameter.getParameterType());
 	}
