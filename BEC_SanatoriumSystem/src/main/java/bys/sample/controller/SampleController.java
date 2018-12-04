@@ -21,19 +21,7 @@ public class SampleController {
      
     @Resource(name="sampleService")
     private SampleService sampleService;
-
    
-    
-    
-    /** To check HTML5 Code **/
-    @RequestMapping(value="/sample/openSample1.do")
-    public ModelAndView openSample1(Map<String,Object> commandMap) throws Exception{
-    	//List<Map<String,Object>> list = sampleService.selectBoardList(commandMap);
-    	ModelAndView mv = new ModelAndView("/sample/sample1");
-        //mv.addObject("list", list);
-        return mv;
-    }
-    
     /************************************************************************************/
     /**   @RequestMapping�� ��û URL�� �ǹ��Ѵ�. 										         /
     /**   /sample/openSampleBoardList.do ��� �ּҸ� ȣ���ϰ� �Ǹ�,							     /
