@@ -27,6 +27,15 @@ public class SampleController {
     /**   /sample/openSampleBoardList.do ��� �ּҸ� ȣ���ϰ� �Ǹ�,							     /
     /**   �� �ּҴ� @RequestMapping ������̼ǰ� ���εǾ�, �ش� �޼��尡 ����ȴ�.                          /
     /************************************************************************************/
+    /*Bootsrap Sample*/
+    @RequestMapping(value="/sample/openBootstrap.do")
+    public ModelAndView openBootstrap(Map<String,Object> commandMap) throws Exception{
+    	List<Map<String,Object>> list = null;//sampleService.selectBoardList(commandMap);
+    	ModelAndView mv = new ModelAndView("/sample/bootstrap");
+        mv.addObject("list", list);
+        return mv;
+    }
+    
     @RequestMapping(value="/sample/openSampleBoardList.do")
     public ModelAndView openSampleBoardList(Map<String,Object> commandMap) throws Exception{
     	List<Map<String,Object>> list = sampleService.selectBoardList(commandMap);
