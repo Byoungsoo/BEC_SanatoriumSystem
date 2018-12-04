@@ -22,12 +22,23 @@ public class SampleController {
     @Resource(name="sampleService")
     private SampleService sampleService;
 
-    /************************************************************************************/
-    /**   @RequestMappingÀº ¿äÃ» URLÀ» ÀÇ¹ÌÇÑ´Ù. 										         /
-    /**   /sample/openSampleBoardList.do ¶ó´Â ÁÖ¼Ò¸¦ È£ÃâÇÏ°Ô µÇ¸é,							     /
-    /**   ÀÌ ÁÖ¼Ò´Â @RequestMapping ¾î³ëÅ×ÀÌ¼Ç°ú ¸ÅÇÎµÇ¾î, ÇØ´ç ¸Þ¼­µå°¡ ½ÇÇàµÈ´Ù.                          /
-    /************************************************************************************/
+   
     
+    
+    /** To check HTML5 Code **/
+    @RequestMapping(value="/sample/openSample1.do")
+    public ModelAndView openSample1(Map<String,Object> commandMap) throws Exception{
+    	//List<Map<String,Object>> list = sampleService.selectBoardList(commandMap);
+    	ModelAndView mv = new ModelAndView("/sample/sample1");
+        //mv.addObject("list", list);
+        return mv;
+    }
+    
+    /************************************************************************************/
+    /**   @RequestMappingï¿½ï¿½ ï¿½ï¿½Ã» URLï¿½ï¿½ ï¿½Ç¹ï¿½ï¿½Ñ´ï¿½. 										         /
+    /**   /sample/openSampleBoardList.do ï¿½ï¿½ï¿½ ï¿½Ö¼Ò¸ï¿½ È£ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ç¸ï¿½,							     /
+    /**   ï¿½ï¿½ ï¿½Ö¼Ò´ï¿½ @RequestMapping ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼Ç°ï¿½ ï¿½ï¿½ï¿½ÎµÇ¾ï¿½, ï¿½Ø´ï¿½ ï¿½Þ¼ï¿½ï¿½å°¡ ï¿½ï¿½ï¿½ï¿½È´ï¿½.                          /
+    /************************************************************************************/
     @RequestMapping(value="/sample/openSampleBoardList.do")
     public ModelAndView openSampleBoardList(Map<String,Object> commandMap) throws Exception{
     	List<Map<String,Object>> list = sampleService.selectBoardList(commandMap);
@@ -35,6 +46,7 @@ public class SampleController {
         mv.addObject("list", list);
         return mv;
     }
+    
     
     @RequestMapping(value="/sample/openBoardWrite.do")
     public ModelAndView openBoardWrite(CommandMap commandMap) throws Exception{
@@ -61,9 +73,7 @@ public class SampleController {
     @RequestMapping(value="/sample/insertBoard.do")
     public ModelAndView insertBoard(CommandMap commandMap) throws Exception{
         ModelAndView mv = new ModelAndView("redirect:/sample/openBoardList.do");
-         
         sampleService.insertBoard(commandMap.getMap());
-         
         return mv;
     }
 

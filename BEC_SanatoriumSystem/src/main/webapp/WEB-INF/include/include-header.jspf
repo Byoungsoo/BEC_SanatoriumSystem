@@ -8,6 +8,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
  
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/sample/ui.css'/>" />
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/sample/sample1.css'/>" />
  
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
