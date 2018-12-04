@@ -5,6 +5,7 @@
 <title>first</title>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ include file="/WEB-INF/include/include-header.jspf" %>
 </head>
 <body>
 <h2>게시판 목록</h2>

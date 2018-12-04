@@ -6,7 +6,7 @@
 </head>
 <body>
     <form id="frm">
-        <table class="board_view">
+        <table class="d-table">
             <colgroup>
                 <col width="15%">
                 <col width="*"/>
