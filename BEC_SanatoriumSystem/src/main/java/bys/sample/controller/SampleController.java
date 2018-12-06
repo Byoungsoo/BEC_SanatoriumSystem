@@ -30,7 +30,7 @@ public class SampleController {
     /*Bootsrap Sample*/
     @RequestMapping(value="/sample/openBootstrap.do")
     public ModelAndView openBootstrap(Map<String,Object> commandMap) throws Exception{
-    	List<Map<String,Object>> list = null;//sampleService.selectBoardList(commandMap);
+    	List<Map<String,Object>> list = null;  //sampleService.selectBoardList(commandMap);
     	ModelAndView mv = new ModelAndView("/sample/bootstrap");
         mv.addObject("list", list);
         return mv;
