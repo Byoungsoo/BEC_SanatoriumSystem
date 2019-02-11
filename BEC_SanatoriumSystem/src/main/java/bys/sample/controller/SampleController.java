@@ -21,7 +21,7 @@ public class SampleController {
      
     @Resource(name="sampleService")
     private SampleService sampleService;
-   
+    /*git test*/
     /************************************************************************************/
     /**   @RequestMapping�� ��û URL�� �ǹ��Ѵ�. 										         /
     /**   /sample/openSampleBoardList.do ��� �ּҸ� ȣ���ϰ� �Ǹ�,							     /
